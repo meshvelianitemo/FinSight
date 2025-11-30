@@ -29,7 +29,7 @@ The goal of this project is to provide a **personal finance management system** 
   - Clean project structure
   - Basic analytics (pie chart, income/expense overview)
 
-This makes it a strong portfolio project for **backend developer** or **full-stack junior roles**.
+
 
 <img src="assets/Register.png" width="700" alt="Register">
 
