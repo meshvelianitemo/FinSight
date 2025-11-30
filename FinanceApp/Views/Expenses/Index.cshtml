@@ -1,0 +1,111 @@
+﻿@model FinanceApp.Models.ExpensesPaginationViewModel
+
+<link rel="stylesheet" href="~/css/expenses.css" />
+
+<h2>My Expenses</h2>
+
+<div class="expenses-wrapper">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach(var item in Model.Expenses)
+            {
+                <tr>
+                    <td>@item.Description</td>
+                    <td>@item.Amount.ToString("C")</td>
+                    <td>@item.Category</td>
+                    <td>@item.Date.ToString("yyyy-MM-dd")</td>
+                    <td class="d-flex gap-2 justify-content-center">
+
+                        <form asp-action="Edit" asp-route-id="@item.Id" method="get">
+                            <button type="submit" class="btn btn-sm btn-outline-primary action-btn" title="Edit">
+                                ✏️
+                            </button>
+                        </form>
+
+                        <form asp-action="Delete" asp-route-id="@item.Id" method="post"
+                              onsubmit="return confirm('Are you sure you want to delete this expense?');">
+                            <button type="submit" class="btn btn-sm btn-outline-danger action-btn" title="Delete">
+                                🗑️
+                            </button>
+                        </form>
+
+                    </td>
+                </tr>
+                
+
+            }
+
+
+        </tbody>
+    </table>
+</div>
+<div class="d-flex justify-content-center mt-3 gap-2">
+
+    @if (Model.CurrentPage > 1)
+    {
+        <a class="btn btn-outline-primary"
+           href="?page=@(Model.CurrentPage - 1)">
+            Previous
+        </a>
+    }
+    @if (Model.TotalPages == 0)
+    {
+        <span class="px-3 py-2">
+        Page @Model.CurrentPage of 1
+        </span>
+    }
+    else
+    {
+    <span class="px-3 py-2">
+        Page @Model.CurrentPage of @Model.TotalPages
+    </span>
+    }
+
+    @if (Model.CurrentPage < Model.TotalPages)
+    {
+        <a class="btn btn-outline-primary"
+           href="?page=@(Model.CurrentPage + 1)">
+            Next
+        </a>
+    }
+
+</div>
+
+<h2>Expenses Overview</h2>
+<div>
+    <canvas style="max-width: 450px; max-height: 450px;"id="myChart"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById('myChart');
+
+    fetch('/Expenses/GetChart')
+            .then(response=> response.json())
+            .then(data=> {
+                new Chart(ctx, {
+                      type: 'pie',
+                      data: {
+                        labels: data.map(d => d.category),
+                        datasets: [{
+                          
+                          data: data.map(d => d.total),
+                         
+                        }]
+                      },
+
+    });
+            
+            })
+
+    
+</script>

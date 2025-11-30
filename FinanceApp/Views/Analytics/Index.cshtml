@@ -1,0 +1,48 @@
+﻿@model FinanceApp.Models.ExpensesAnalyticsViewModel
+
+<link rel="stylesheet" href="~/css/analytics.css" />
+
+<div class="analytics-wrapper">
+    <h2>Expense Analytics</h2>
+
+    <h3>Summary</h3>
+    <ul class="analytics-summary">
+        <li><strong>Total Expenses:</strong> @Model.Total.ToString("C")</li>
+        <li><strong>Transactions:</strong> @Model.TransactionCount</li>
+        <li><strong>Daily Average:</strong> @Model.DailyAverage.ToString("C")</li>
+        <li><strong>Total This Month:</strong> @Model.TotalForCurrentMonth.ToString("C")</li>
+        <li><strong>Top Category:</strong> @Model.TopCategory</li>
+        <li class="largest-expense">
+            <strong>Largest Expense:</strong>
+            @if (Model.LargestExpense != null)
+            {
+                @($"{Model.LargestExpense.Description} - {Model.LargestExpense.Amount:C}")
+            }
+        </li>
+        <li><strong>Top Spending Day of Week:</strong> @Model.TopSpendingDayOfWeek</li>
+    </ul>
+
+    <h3>Category Breakdown</h3>
+    <ul class="category-breakdown">
+        @foreach (var cat in Model.TotalsByCategory ?? new Dictionary<string, double>())
+        {
+            <li>@cat.Key: @cat.Value.ToString("C")</li>
+        }
+    </ul>
+
+    <h3>Monthly Breakdown</h3>
+    <ul class="monthly-breakdown">
+        @foreach (var month in Model.MonthlyBreakdown ?? new Dictionary<int, double>())
+        {
+            <li>@System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month.Key): @month.Value.ToString("C")</li>
+        }
+    </ul>
+
+    <h3>Daily Totals (Recent)</h3>
+    <ul class="daily-totals">
+        @foreach (var day in Model.DailyTotals?.OrderByDescending(d => d.Key).Take(7) ?? new Dictionary<DateTime, double>())
+        {
+            <li>@day.Key.ToString("yyyy-MM-dd"): @day.Value.ToString("C")</li>
+        }
+    </ul>
+</div>

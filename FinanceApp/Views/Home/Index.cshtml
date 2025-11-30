@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+
+<div class="home-wrapper">
+
+    <h1 class="display-4">Welcome to FinSight</h1>
+    <p class="lead">
+        A clean and simple personal finance management application built with ASP.NET Core MVC.
+    </p>
+
+    <hr />
+
+    <h3>Key Features</h3>
+
+    <div class="features-container">
+
+        <div class="feature-card">
+            <img src="~/images/authentication.svg" alt="Authentication" class="feature-img" />
+            <h5>User Authentication</h5>
+            <p>Secure login and registration with JWT tokens, email verification, and password hashing.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="~/images/expenses.svg" alt="Expenses" class="feature-img" />
+            <h5>Expenses Management</h5>
+            <p>Add, edit, and delete expenses. Browse expenses with pagination and search capabilities.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="~/images/analytics.svg" alt="Analytics" class="feature-img" />
+            <h5>Analytics & Charts</h5>
+            <p>Track your spending with daily, weekly, and monthly summaries. Visualize categories with pie and bar charts.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="~/images/database.svg" alt="Database" class="feature-img" />
+            <h5>Database Integration</h5>
+            <p>Uses Entity Framework Core with SQL Server for data persistence and easy queries.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="~/images/privacy.svg" alt="Privacy" class="feature-img" />
+            <h5>Privacy & Security</h5>
+            <p>Dedicated Privacy Policy page and secure storage of sensitive data.</p>
+        </div>
+
+    </div>
+
+    <div class="mt-5">
+        <a class="btn btn-primary btn-lg" href="/Home/Privacy">View Privacy Policy</a>
+    </div>
+
+</div>

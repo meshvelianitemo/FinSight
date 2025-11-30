@@ -1,0 +1,378 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.login-btn {
+    padding: 6px 14px !important;
+    border: 2px solid #0d6efd;
+    border-radius: 8px;
+    color: #0d6efd !important;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+
+    .login-btn:hover {
+        background-color: #0d6efd;
+        color: white !important;
+    }
+/*Login Page view CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-container {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+.login-header h2 {
+    color: #212529;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        color: #495057;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        font-size: 14px;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        font-family: inherit;
+    }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #80bdff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
+        }
+
+        .form-group input::placeholder {
+            color: #adb5bd;
+        }
+
+.login-button {
+    width: 100%;
+    padding: 10px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+    margin-top: 5px;
+}
+
+    .login-button:hover {
+        background-color: #0056b3;
+    }
+
+    .login-button:active {
+        background-color: #004085;
+    }
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border: 1px solid #f5c6cb;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/*Register page view .CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.register-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.register-container {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .register-header h2 {
+        color: #212529;
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .register-header p {
+        color: #6c757d;
+        font-size: 14px;
+    }
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        color: #495057;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        font-size: 14px;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        font-family: inherit;
+    }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #80bdff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
+        }
+
+        .form-group input::placeholder {
+            color: #adb5bd;
+        }
+
+.register-button {
+    width: 100%;
+    padding: 10px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+    margin-top: 5px;
+}
+
+    .register-button:hover {
+        background-color: #218838;
+    }
+
+    .register-button:active {
+        background-color: #1e7e34;
+    }
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border: 1px solid #f5c6cb;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.register-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+    .register-footer p {
+        color: #6c757d;
+        font-size: 14px;
+    }
+
+    .register-footer a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.15s ease-in-out;
+    }
+
+        .register-footer a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+
+/* Navbar Sign Out button styling to match Login/Register buttons */
+.logout-btn {
+    padding: 6px 14px !important;
+    border: 2px solid #0d6efd;
+    border-radius: 8px;
+    color: #0d6efd !important;
+    font-weight: 600;
+    background-color: transparent;
+    transition: 0.2s ease-in-out;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+    .logout-btn:hover {
+        background-color: #0d6efd;
+        color: white !important;
+    }
+
+
+/*DELETE AND EDIT BUTTONS .CSS*/
+.action-btn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    opacity: 0.4;
+}
+
+tr:hover .action-btn {
+    opacity: 1;
+}
+
+.action-btn:hover {
+    transform: scale(1.15);
+}
+
+
+/*USERNAME .CSS */
+
+.navbar .username {
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+/* FINANCE APP TITLE-BUTTON .CSS */
+.navbar-brand {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 10px;
+    color: #0d6efd !important;
+    border: 2px solid #0d6efd;
+    transition: 0.25s ease-in-out;
+}
+
+    .navbar-brand:hover {
+        background-color: #0d6efd;
+        color: white !important;
+        transform: translateY(-1px);
+    }
+
+/*OTHER BUTTONS _layout.cshtml .CSS*/
+
+.navbar-nav .nav-link {
+    color: #343a40 !important;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.2s ease-in-out;
+}
+
+    .navbar-nav .nav-link:hover {
+        background-color: #e9f2ff;
+        color: #0d6efd !important;
+    }
+
+
+/*EDITING HTTP GET VIEW .CSS (WHEN OTHER ROWS FADE)*/
+.faded-row {
+    opacity: 0.4;
+    transition: 0.2s;
+}
+
+.editing-row {
+    background-color: #fff8d6 !important; /* light yellow */
+    font-weight: 600;
+}

@@ -1,0 +1,51 @@
+﻿@model VerifyEmailRequest 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email</title>
+    <link rel="stylesheet" href="~/css/register.css" />
+</head>
+<body>
+    <div class="register-wrapper">
+        <div class="register-container">
+            <div class="register-header">
+                <h2>Email Verification</h2>
+                <p>We've sent a verification code to your email.</p>
+            </div>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="error-message">
+                    @ViewBag.Error
+                </div>
+            }
+
+            <form method="post">
+                <input type="hidden" name="Email" value="@Model.Email" />
+
+                <div class="form-group">
+                    <label for="VerificationCode">Verification Code</label>
+                    <input type="text"
+                           id="VerificationCode"
+                           name="VerificationCode"
+                           placeholder="Enter the code"
+                           required />
+                </div>
+
+                <button type="submit" class="register-button">Verify</button>
+            </form>
+
+            <div class="register-footer">
+                <p>Didn’t get the code?  
+                    <a href="@Url.Action("ResendVerification", "Authentication", new { email = Model.Email })">
+                        Resend Code
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
