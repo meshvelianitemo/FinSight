@@ -7,7 +7,7 @@ The system allows users to securely track their income, expenses, categories, an
 
 <img src="assets/Home.png" width="700" alt="Home">
 
-## 🚀 Purpose of the Project
+## Purpose of the Project
 The goal of this project is to provide a **personal finance management system** that:
 
 - Helps users understand their daily, weekly, and monthly spending.
@@ -18,7 +18,7 @@ The goal of this project is to provide a **personal finance management system** 
 
 ---
 
-## 🧩 What This Project Can Be Used For
+## What This Project Can Be Used For
 - Personal budgeting and tracking finances.
 - Demonstrating knowledge of **backend development**.
 - Showing skills in:
@@ -35,7 +35,7 @@ The goal of this project is to provide a **personal finance management system** 
 
 ---
 
-## 📌 Key Features
+## Key Features
 - User Registration & Login
 - JWT-based authentication stored in cookies
 - Email verification flow
@@ -52,7 +52,7 @@ The goal of this project is to provide a **personal finance management system** 
 ---
 <img src="assets/Login.png" width="700" alt="Login">
 
-## 🛠️ Technologies Used
+## Technologies Used
 - **ASP.NET MVC**
 - **Entity Framework Core**
 - **SQL Server (LocalDB for development)**
@@ -64,7 +64,7 @@ The goal of this project is to provide a **personal finance management system** 
 ---
 <img src="assets/Expenses.png" width="700" alt="Expenses">
 
-## 🖥️ How to Run the Project Locally
+## How to Run the Project Locally
 Since the project is not deployed, anyone can run it on their machine.
 
 ### **Prerequisites**
@@ -83,12 +83,12 @@ Since the project is not deployed, anyone can run it on their machine.
 4. Apply migrations: dotnet ef database update
 5. Run the project: dotnet run
 
-📬 Notes
+Notes
 
 This project currently uses local SQL Server, so deployment requires setting up a cloud database.
 The app supports easy migration to cloud platforms such as Azure App Service, Railway, Supabase, or Render.
 
-📄 License
+License
 
 This project is open-source and available for learning and portfolio purposes.
 
